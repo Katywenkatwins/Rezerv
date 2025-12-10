@@ -4,7 +4,7 @@ export function VacanciesPage() {
   const [dontShowAgain, setDontShowAgain] = useState(false);
 
   return (
-    <div className="h-[771.65px] w-full px-[29px] pt-[100px] pb-[40px] flex flex-col">
+    <div className="w-full h-full px-[29px] pt-[20px] pb-[20px] flex flex-col overflow-y-auto">
       {/* Header with title and help icon */}
       <div className="flex items-start justify-between mb-[38px]">
         <h1 className="font-['e-Ukraine',sans-serif] font-medium text-[#2c2c2c] text-[32px] leading-[36px] tracking-[-0.5px]">
@@ -21,7 +21,7 @@ export function VacanciesPage() {
           Тут знаходяться актуальні посади для служби в українському війську, надані у співпраці з платформою Lobby X.
         </p>
         <p className="font-['e-Ukraine',sans-serif] font-normal text-[#2c2c2c] text-[16px] leading-[24px] tracking-[-0.2px]">
-          Це найбільший перелік пропозицій, який допоможе знайти ту, що підходить саме вам. Обирайте варіанти, подавайте заявки у кілька кліків і очікуйте відповіді від бригади.
+          Це найбільший пеелік пропозицій, який допоможе знайти ту, що підходить саме вам. Обирайте варіанти, подавайте заявки у кілька кліків і очікуйте відповіді від бригади.
         </p>
       </div>
 

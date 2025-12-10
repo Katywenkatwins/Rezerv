@@ -29,7 +29,7 @@ export function MenuPage() {
   ];
 
   return (
-    <div className="h-[771.65px] w-full px-6 pt-16">
+    <div className="w-full h-full px-6 pt-6 pb-6 overflow-y-auto">
       <div className="mb-6">
         <h1 className="font-['e-Ukraine',sans-serif] font-medium text-[32px] text-[#2c2c2c] mb-1">
           Меню

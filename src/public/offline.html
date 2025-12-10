@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Резерв ID - Офлайн</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background-color: #e0dfcb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      text-align: center;
+      max-width: 400px;
+    }
+    
+    .icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background-color: #fc8a0e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+    
+    h1 {
+      color: #2c2c2c;
+      font-size: 24px;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    
+    p {
+      color: #2c2c2c;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+    
+    .button {
+      display: inline-block;
+      background-color: #fc8a0e;
+      color: #242813;
+      padding: 12px 32px;
+      border-radius: 32px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: opacity 0.2s;
+    }
+    
+    .button:active {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📱</div>
+    <h1>Немає з'єднання</h1>
+    <p>Схоже, що ви офлайн. Деякі функції можуть бути недоступні. Будь ласка, перевірте підключення до Інтернету.</p>
+    <a href="/" class="button">Спробувати знову</a>
+  </div>
+  
+  <script>
+    // Auto-reload when online
+    window.addEventListener('online', () => {
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>

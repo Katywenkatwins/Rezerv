@@ -30,7 +30,7 @@ export function IdCardPage() {
   return (
     <div className="h-[534.936px] w-full relative">
       {/* Notification button */}
-      <div className="absolute left-[241px] top-[70px] w-[130px] h-[30px] bg-[#fbfdfc] rounded-full px-[9.5px] pt-[0.5px] pb-0 flex items-center gap-[2px]">
+      <div className="absolute left-[241px] top-[10px] w-[130px] h-[30px] bg-[#fbfdfc] rounded-full px-[9.5px] pt-[0.5px] pb-0 flex items-center gap-[2px] mt-[0px] mr-[0px] mb-[32px] ml-[0px]">
         <div className="h-[22px] w-[89px]">
           <p className="font-['Mulish',sans-serif] font-bold leading-[24px] text-[14px] text-black whitespace-nowrap mt-[-2px] mr-[0px] mb-[0px] ml-[0px]">
             Сповіщення
@@ -44,7 +44,7 @@ export function IdCardPage() {
       </div>
 
       {/* ID Card */}
-      <div className="absolute left-[23px] top-[192px] w-[347px] h-[447px]">
+      <div className="absolute left-[23px] top-[60px] w-[347px] h-[447px]">
         <IdCard 
           userData={userData}
           onPlusClick={() => setShowMenu(true)}
