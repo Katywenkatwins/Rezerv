@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import svgPaths from '../imports/svg-yozftvfaza';
-import svgPathsHeader from '../imports/svg-5nam47tnr4';
+import svgPathsHeader from '../imports/svg-5tx85a08ia';
 import qrCodeImage from 'figma:asset/fe890c35b0c0d75d3d3ac28df84da272495c9082.png';
 
 interface UserData {
@@ -23,10 +23,16 @@ interface IdCardProps {
 
 export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [flipKey, setFlipKey] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const handlePhotoClick = () => {
     fileInputRef.current?.click();
+  };
+
+  const handleFlip = () => {
+    setIsFlipped(!isFlipped);
+    setFlipKey(prev => prev + 1);
   };
 
   return (
@@ -41,8 +47,19 @@ export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
         <motion.div
           className="absolute inset-0 bg-[#d5d3be] border border-[#a4a290] border-solid rounded-[8px] overflow-hidden cursor-pointer"
           style={{ backfaceVisibility: 'hidden' }}
-          onClick={() => setIsFlipped(!isFlipped)}
+          onClick={handleFlip}
         >
+          {/* Darken overlay during flip */}
+          {flipKey > 0 && (
+            <motion.div
+              key={`front-${flipKey}`}
+              className="absolute inset-0 bg-black pointer-events-none rounded-[8px] z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.5, 0] }}
+              transition={{ duration: 0.6 }}
+            />
+          )}
+          
           {/* Header */}
           <div className="h-[64px] px-[15px] pt-[5px] pb-0 flex items-center justify-between">
             <div className="h-[31.993px] w-[105.85px]">
@@ -53,7 +70,7 @@ export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
             <svg className="w-[36px] h-[47px]" fill="none" preserveAspectRatio="none" viewBox="0 0 36 47">
               <path 
                 clipRule="evenodd" 
-                d={svgPathsHeader.p29491e80} 
+                d={svgPathsHeader.p21d40680} 
                 fill="#2A2A2A" 
                 fillRule="evenodd" 
                 stroke="#2A2A2A" 
@@ -78,6 +95,7 @@ export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
                   e.stopPropagation();
                   handlePhotoClick();
                 }}
+                type="button"
                 className="block w-full h-full"
               >
                 <div className="bg-gray-200 h-[197px] overflow-hidden rounded-[6px] w-[147px]">
@@ -215,8 +233,19 @@ export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
             backfaceVisibility: 'hidden',
             transform: 'rotateY(180deg)',
           }}
-          onClick={() => setIsFlipped(!isFlipped)}
+          onClick={handleFlip}
         >
+          {/* Darken overlay during flip */}
+          {flipKey > 0 && (
+            <motion.div
+              key={`back-${flipKey}`}
+              className="absolute inset-0 bg-black pointer-events-none rounded-[8px] z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: [0, 0.5, 0] }}
+              transition={{ duration: 0.6 }}
+            />
+          )}
+          
           <div className="flex flex-col items-center justify-center h-full px-[30px] py-[40px]">
             <p className="font-['e-Ukraine',sans-serif] font-normal leading-[24px] text-[#2c2c2c] text-[15px] tracking-[-0.2px] mb-[28px] text-center">
               QR-код дійсний до 10 грудня 2026

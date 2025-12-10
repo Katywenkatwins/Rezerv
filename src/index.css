@@ -389,6 +389,10 @@
 }
 
 @layer utilities {
+  .pointer-events-none {
+    pointer-events: none;
+  }
+
   .absolute {
     position: absolute;
   }
@@ -513,12 +517,12 @@
     margin-top: 0;
   }
 
-  .mt-\[32px\] {
-    margin-top: 32px;
+  .mt-\[4px\] {
+    margin-top: 4px;
   }
 
-  .mt-\[40px\] {
-    margin-top: 40px;
+  .mt-\[32px\] {
+    margin-top: 32px;
   }
 
   .mr-\[0px\] {
@@ -555,10 +559,6 @@
 
   .mb-\[38px\] {
     margin-bottom: 38px;
-  }
-
-  .mb-auto {
-    margin-bottom: auto;
   }
 
   .ml-\[-1px\] {
@@ -736,12 +736,16 @@
     height: 534.936px;
   }
 
+  .h-\[calc\(100vh-80px\)\] {
+    height: calc(100vh - 80px);
+  }
+
   .h-full {
     height: 100%;
   }
 
-  .h-screen {
-    height: 100vh;
+  .min-h-screen {
+    min-height: 100vh;
   }
 
   .w-0 {
@@ -760,12 +764,12 @@
     width: 18px;
   }
 
-  .w-\[24px\] {
-    width: 24px;
+  .w-\[22px\] {
+    width: 22px;
   }
 
-  .w-\[26px\] {
-    width: 26px;
+  .w-\[24px\] {
+    width: 24px;
   }
 
   .w-\[28px\] {
@@ -848,12 +852,12 @@
     width: 347px;
   }
 
-  .w-\[393\.144px\] {
-    width: 393.144px;
-  }
-
   .w-full {
     width: 100%;
+  }
+
+  .max-w-\[393\.144px\] {
+    max-width: 393.144px;
   }
 
   .max-w-\[393px\] {
@@ -880,10 +884,6 @@
   .translate-y-\[-50\%\] {
     --tw-translate-y: -50%;
     translate: var(--tw-translate-x) var(--tw-translate-y);
-  }
-
-  .scale-\[0\.85\] {
-    scale: .85;
   }
 
   .transform {
@@ -970,6 +970,10 @@
     border-radius: var(--radius-2xl);
   }
 
+  .rounded-\[4px\] {
+    border-radius: 4px;
+  }
+
   .rounded-\[6px\] {
     border-radius: 6px;
   }
@@ -1032,6 +1036,10 @@
     border-color: #cdcac5;
   }
 
+  .border-black {
+    border-color: var(--color-black);
+  }
+
   .border-gray-100 {
     border-color: var(--color-gray-100);
   }
@@ -1060,6 +1068,10 @@
     background-color: #fc8a0e;
   }
 
+  .bg-black {
+    background-color: var(--color-black);
+  }
+
   .bg-black\/50 {
     background-color: #00000080;
   }
@@ -1084,10 +1096,6 @@
 
   .bg-white {
     background-color: var(--color-white);
-  }
-
-  .object-contain {
-    object-fit: contain;
   }
 
   .object-cover {

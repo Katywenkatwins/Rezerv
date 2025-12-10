@@ -6,7 +6,7 @@ import svgPaths from '../imports/svg-yozftvfaza';
 export function IdCardPage() {
   const [showMenu, setShowMenu] = useState(false);
   const [userData, setUserData] = useState({
-    photo: 'figma:asset/e60816fd350bc61725889a9dad6a59c1d99c4bcf.png',
+    photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop',
     birthDate: '15.12.1988',
     defermentDate: '02.02.2026',
     lastName: 'ЯЦКОВЕЦЬ',

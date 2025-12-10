@@ -1,8 +1,8 @@
 const CACHE_NAME = 'rezerv-id-v1';
+const BASE_PATH = '/Rezerv';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/styles/globals.css'
+  `${BASE_PATH}/`,
+  `${BASE_PATH}/index.html`
 ];
 
 // Install event - cache resources
@@ -12,6 +12,9 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Opened cache');
         return cache.addAll(urlsToCache);
+      })
+      .catch((error) => {
+        console.log('Cache addAll error:', error);
       })
   );
   self.skipWaiting();

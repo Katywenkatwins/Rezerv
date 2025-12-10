@@ -3,14 +3,13 @@ import { IdCardPage } from './components/IdCardPage';
 import { MenuPage } from './components/MenuPage';
 import { VacanciesPage } from './components/VacanciesPage';
 import svgPaths from './imports/svg-yozftvfaza';
-import svgPathsVacancies from './imports/svg-24tkfbwd37';
-import vacanciesIcon from 'figma:asset/bba793d3f9103e869728c21d823cad53cbf738e3.png';
+import vacanciesIconPaths from './imports/svg-w4ibpsqtn2';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'id' | 'vacancies' | 'menu'>('id');
 
   return (
-    <div className="relative w-[393.144px] h-screen bg-[#e0dfcb] overflow-hidden mx-auto flex flex-col">
+    <div className="relative w-full max-w-[393.144px] min-h-screen bg-[#e0dfcb] overflow-hidden mx-auto flex flex-col">
       {/* Main content */}
       <div className="flex-1 overflow-y-auto overflow-x-hidden">
         {activeTab === 'id' && <IdCardPage />}
@@ -47,8 +46,10 @@ export default function App() {
             onClick={() => setActiveTab('vacancies')}
             className="h-[59.979px] w-[91.323px] flex flex-col items-center gap-[3.997px] py-[7.993px] text-black"
           >
-            <div className="w-[26px] h-[28px]">
-              <img src={vacanciesIcon} alt="" className="block size-full object-contain scale-[0.85]" />
+            <div className="w-[22px] h-[28px] rounded-[4px] border-2 border-black mt-[4px] mr-[0px] mb-[0px] ml-[0px]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 20 23">
+                <path d={vacanciesIconPaths.p27ef9800} fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.99993" />
+              </svg>
             </div>
             <div className="h-[15.996px] w-[43.324px]">
               <p className="font-['e-Ukraine',sans-serif] font-medium leading-[16px] text-[11px] tracking-[-0.2px] whitespace-nowrap text-center">
@@ -70,7 +71,7 @@ export default function App() {
               </svg>
             </div>
             <div className="h-[15.996px] w-[33.729px]">
-              <p className="font-['e-Ukraine',sans-serif] font-medium leading-[16px] text-[11px] tracking-[-0.7px] whitespace-nowrap text-center">
+              <p className="font-['e-Ukraine',sans-serif] font-medium leading-[16px] text-[11px] tracking-[-0.7px] whitespace-nowrap text-center mt-[4px] mr-[0px] mb-[0px] ml-[0px]">
                 Меню
               </p>
             </div>
