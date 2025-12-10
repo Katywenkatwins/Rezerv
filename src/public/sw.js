@@ -1,2 +1,3 @@
-// Redirect to main service worker file
-importScripts('/Rezerv/service-worker.js');
+// Alternative Service Worker entry point
+// Just use the main service-worker.js file
+self.importScripts('service-worker.js');
