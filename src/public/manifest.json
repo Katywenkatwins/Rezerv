@@ -1,7 +1,7 @@
 {
   "name": "Резерв ID",
   "short_name": "Резерв",
-  "start_url": "/Rezerv/",
+  "start_url": "/Rezerv/index.html",
   "scope": "/Rezerv/",
   "display": "standalone",
   "background_color": "#e0dfcb",
@@ -10,16 +10,19 @@
   "description": "Військово-обліковий документ",
   "icons": [
     {
-      "src": "/Rezerv/icon-192.png",
+      "src": "/Rezerv/icon-128x128.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "sizes": "128x128"
     },
     {
-      "src": "/Rezerv/icon-512.png",
+      "src": "/Rezerv/icon-192x192.png",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Rezerv/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
