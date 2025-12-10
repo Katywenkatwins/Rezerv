@@ -2,7 +2,7 @@ import { useState, useRef } from 'react';
 import { motion } from 'motion/react';
 import svgPaths from '../imports/svg-yozftvfaza';
 import svgPathsHeader from '../imports/svg-5tx85a08ia';
-import qrCodeImage from 'figma:asset/fe890c35b0c0d75d3d3ac28df84da272495c9082.png';
+
 
 interface UserData {
   photo: string;
@@ -252,7 +252,7 @@ export function IdCard({ userData, onPlusClick, onPhotoChange }: IdCardProps) {
             </p>
             <div className="w-[340px] h-[340px] bg-white flex items-center justify-center">
               <img
-                src={qrCodeImage}
+                src="https://raw.githubusercontent.com/Katywenkatwins/Rezerv/main/src/imports/image%206.png"
                 alt="QR Code"
                 className="w-full h-full object-cover px-[9px] py-[0px]"
               />
