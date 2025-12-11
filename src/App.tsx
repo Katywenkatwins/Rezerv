@@ -9,16 +9,16 @@ export default function App() {
   const [activeTab, setActiveTab] = useState<'id' | 'vacancies' | 'menu'>('id');
 
   return (
-    <div className="relative w-full max-w-[393.144px] min-h-screen bg-[#e0dfcb] overflow-hidden mx-auto flex flex-col">
+    <div className="relative w-full h-screen bg-[#e0dfcb] mx-auto flex flex-col">
       {/* Main content */}
-      <div className="flex-1 overflow-y-auto overflow-x-hidden">
+      <div className="flex-1 overflow-y-auto overflow-x-hidden pb-[80.573px] scrollbar-hide">
         {activeTab === 'id' && <IdCardPage />}
         {activeTab === 'vacancies' && <VacanciesPage />}
         {activeTab === 'menu' && <MenuPage />}
       </div>
 
-      {/* Bottom navigation */}
-      <div className="flex-shrink-0 w-full h-[80.573px] bg-white border-t border-[#cdcac5]">
+      {/* Bottom navigation - fixed */}
+      <div className="fixed bottom-0 left-0 right-0 w-full mx-auto h-[80.573px] bg-white border-t border-[#cdcac5]">
         <div className="h-[67.972px] w-full flex items-center justify-between px-[19.859px] -mt-[9.4px]">
           {/* Резерв ID button */}
           <button

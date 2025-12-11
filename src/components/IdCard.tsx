@@ -3,7 +3,6 @@ import { motion } from 'motion/react';
 import svgPaths from '../imports/svg-yozftvfaza';
 import svgPathsHeader from '../imports/svg-5tx85a08ia';
 
-
 interface UserData {
   photo: string;
   birthDate: string;
