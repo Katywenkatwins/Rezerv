@@ -5,6 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/Rezerv/',
+  publicDir: 'public',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -15,6 +16,8 @@ export default defineConfig({
         manualChunks: undefined,
       },
     },
+    // Копіювати файли з public в dist
+    copyPublicDir: true,
   },
   server: {
     port: 3000,
